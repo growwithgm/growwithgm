@@ -3,475 +3,335 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ghulam Muhammad | Elite Google Ads & Shopify Strategist v5.0</title>
-    <meta name="description" content="Version 5.0: Ghulam Muhammad delivers elite Google Ads management and Shopify optimization services for maximum business growth. Based in Sargodha, Pakistan. Get your free consultation." />
+    <title>Ghulam Muhammad | Elite Google Ads & Shopify Strategist v2.0</title>
+    <meta name="description" content="Elite Google Ads management and Shopify optimization for business growth. Version 2.0." />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <style>
-        /* Custom Styles */
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8f9fa; /* Slightly lighter gray background */
-            color: #212529; /* Darker text color for better contrast */
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+            transition: background-color 0.3s, color 0.3s;
         }
-        /* Refined Color Palette */
-        .bg-primary-dark { background-color: #001f4d; } /* Darker Navy */
-        .bg-primary { background-color: #003366; } /* Navy Blue */
-        .text-primary { color: #003366; }
-        .border-primary { border-color: #003366; }
-
-        .bg-secondary { background-color: #005eb8; } /* Bright Blue */
-        .text-secondary { color: #005eb8; }
-        .border-secondary { border-color: #005eb8; }
-
-        .bg-accent { background-color: #ffc107; } /* Amber Yellow */
-        .text-accent { color: #ffc107; }
-        .hover\:bg-accent-dark:hover { background-color: #ffca2c; } /* Slightly lighter amber */
-        .text-accent-dark { color: #a07400; } /* Darker text for yellow bg */
-
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
+        h1, h2 {
+            font-family: 'Montserrat', sans-serif;
         }
-
-        /* Subtle Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        html.dark body {
+            background-color: #1a202c; /* Darker background */
+            color: #e2e8f0; /* Lighter text */
         }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fadeIn { animation: fadeIn 0.8s ease-out forwards; }
-        .animate-fadeInUp { animation: fadeInUp 0.6s ease-out forwards; }
-        .animate-delay-100 { animation-delay: 0.1s; opacity: 0; } /* Start hidden */
-        .animate-delay-200 { animation-delay: 0.2s; opacity: 0; }
-        .animate-delay-300 { animation-delay: 0.3s; opacity: 0; }
-
-        /* Active Nav Link Styling */
+        .bg-primary-dark { background-color: #1a365d; } /* Deeper primary dark */
+        .bg-primary { background-color: #2a4365; } /* Deeper primary */
+        .text-primary { color: #2a4365; }
+        .bg-secondary { background-color: #3182ce; } /* Brighter secondary blue */
+        .text-secondary { color: #3182ce; }
+        .bg-accent { background-color: #f6ad55; } /* Slightly more vibrant accent */
+        .text-accent { color: #f6ad55; }
+        .hover\:bg-accent-dark:hover { background-color: #ed8936; } /* Darker accent on hover */
+        .text-accent-dark { color: #c05621; }
+        html { scroll-behavior: smooth; }
         nav a.active {
-            color: #ffc107; /* Accent color for active link */
+            color: #f6ad55; /* Accent color */
             position: relative;
+            font-weight: 700;
         }
         nav a.active::after {
             content: '';
             position: absolute;
-            bottom: -5px; /* Adjust as needed */
+            bottom: -8px; /* Adjusted position */
             left: 0;
             width: 100%;
-            height: 2px;
-            background-color: #ffc107;
+            height: 3px; /* Thicker line */
+            background-color: #f6ad55; /* Accent color */
+            border-radius: 1.5px;
         }
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px); /* Slightly larger movement */
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Slower transition */
+        }
+        .fade-in-section.visible {
+            opacity: 1;
+            transform: none;
+        }
+         .service-card {
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        html.dark .service-card {
+             background-color: #2d3748; /* Darker card background */
+             color: #e2e8f0;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+         .testimonial-card {
+            background-color: #edf2f7; /* Light grey background */
+            border-left: 4px solid #f6ad55; /* Accent color border */
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem; /* Space between testimonials */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+         }
+         html.dark .testimonial-card {
+             background-color: #4a5568; /* Darker testimonial background */
+             border-left-color: #ed8936; /* Darker accent border */
+             color: #e2e8f0;
+         }
+         .testimonial-card footer {
+             font-style: normal;
+             margin-top: 0.75rem;
+             font-weight: 500;
+             color: #4a5568;
+         }
+         html.dark .testimonial-card footer {
+             color: #cbd5e0;
+         }
 
-        /* Back to top button */
-        #backToTopBtn {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            display: none; /* Hidden by default */
-            z-index: 100;
-            transition: opacity 0.3s, visibility 0.3s;
-        }
 
-        /* Testimonial Styling */
-        .testimonial { display: none; }
-        .testimonial.active { display: block; animation: fadeIn 0.5s ease-in-out; }
-
-        /* Section Padding */
-        section {
-            padding: 4rem 1rem; /* py-16 px-4 */
-        }
-        @media (min-width: 768px) {
-            section {
-                padding: 5rem 1rem; /* py-20 px-4 */
-            }
-        }
-        @media (min-width: 1024px) {
-            section {
-                padding: 6rem 1rem; /* py-24 px-4 */
-            }
+        @media (max-width: 768px) {
+            nav { justify-content: space-around; }
+            nav a { padding: 0.5rem 0.75rem; } /* Adjust padding for smaller screens */
         }
     </style>
 </head>
-<body class="antialiased">
+<body>
+    <button onclick="document.documentElement.classList.toggle('dark')" class="fixed top-4 right-4 z-50 bg-accent text-black font-bold py-2 px-4 rounded-full shadow hover:bg-accent-dark transition">Toggle Mode</button>
 
-    <header class="bg-primary-dark shadow-lg sticky top-0 z-50">
-        <nav id="mainNav" class="container mx-auto px-4 py-4 flex flex-wrap justify-center items-center gap-5 md:gap-10">
-            <a href="#hero" class="nav-link text-white hover:text-accent transition duration-300 font-medium text-sm md:text-base"><i class="fas fa-home mr-1 opacity-80"></i> Home</a>
-            <a href="#about" class="nav-link text-white hover:text-accent transition duration-300 font-medium text-sm md:text-base"><i class="fas fa-user-tie mr-1 opacity-80"></i> About</a>
-            <a href="#services" class="nav-link text-white hover:text-accent transition duration-300 font-medium text-sm md:text-base"><i class="fas fa-concierge-bell mr-1 opacity-80"></i> Services</a>
-            <a href="#results" class="nav-link text-white hover:text-accent transition duration-300 font-medium text-sm md:text-base"><i class="fas fa-chart-pie mr-1 opacity-80"></i> Results</a>
-            <a href="#testimonials" class="nav-link text-white hover:text-accent transition duration-300 font-medium text-sm md:text-base"><i class="fas fa-comments mr-1 opacity-80"></i> Testimonials</a>
-            <a href="#tools" class="nav-link text-white hover:text-accent transition duration-300 font-medium text-sm md:text-base"><i class="fas fa-tools mr-1 opacity-80"></i> Tools</a>
-            <a href="#contact" class="nav-link text-white hover:text-accent transition duration-300 font-medium text-sm md:text-base"><i class="fas fa-envelope-open-text mr-1 opacity-80"></i> Contact</a>
-        </nav>
+    <header class="bg-primary-dark sticky top-0 z-50 shadow-lg">
+        <nav class="container mx-auto px-4 py-4 flex flex-wrap justify-center md:justify-start gap-y-2 gap-x-6 md:gap-10 text-sm md:text-base">
+            <a href="#hero" class="nav-link text-white hover:text-accent transition duration-300"><i class="fas fa-home mr-1"></i> Home</a>
+            <a href="#about" class="nav-link text-white hover:text-accent transition duration-300"><i class="fas fa-user-tie mr-1"></i> About</a>
+            <a href="#services" class="nav-link text-white hover:text-accent transition duration-300"><i class="fas fa-concierge-bell mr-1"></i> Services</a>
+            <a href="#results" class="nav-link text-white hover:text-accent transition duration-300"><i class="fas fa-chart-line mr-1"></i> Results</a> <a href="#testimonials" class="nav-link text-white hover:text-accent transition duration-300"><i class="fas fa-comments mr-1"></i> Testimonials</a>
+            <a href="#tools" class="nav-link text-white hover:text-accent transition duration-300"><i class="fas fa-toolbox mr-1"></i> Tools</a> <a href="#contact" class="nav-link text-white hover:text-accent transition duration-300"><i class="fas fa-envelope mr-1"></i> Contact</a> </nav>
     </header>
 
-    <main>
+    <section id="hero" class="fade-in-section text-center py-20 bg-gradient-to-r from-primary-dark to-primary text-white">
+        <div class="container mx-auto px-4">
+            <img src="images/profile-ghulam.jpg" alt="Ghulam Muhammad - Elite Strategist" class="w-40 h-40 mx-auto rounded-full border-4 border-accent shadow-lg mb-6 object-cover">
+            <h1 class="text-4xl md:text-5xl font-bold mb-3">Ghulam Muhammad</h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-8">Elite Google Ads & Shopify Strategist</p>
+            <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-10">Driving measurable growth for e-commerce businesses through expert paid advertising and platform optimization.</p>
+             <a href="#contact" class="bg-accent text-primary-dark font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:bg-accent-dark transition duration-300">
+                Get in Touch <i class="fas fa-arrow-right ml-2"></i>
+             </a>
+        </div>
+    </section>
 
-        <section id="hero" class="bg-gradient-to-b from-primary to-secondary text-white pt-20 pb-16 md:pt-28 md:pb-24 px-4 text-center overflow-hidden">
-            <div class="container mx-auto animate-fadeIn">
-                <img src="https://placehold.co/180x180/ffffff/212529?text=GM+v5" alt="Ghulam Muhammad - Elite Strategist" class="w-36 h-36 md:w-44 md:h-44 mx-auto rounded-full border-4 border-accent shadow-xl mb-6 object-cover transform hover:scale-105 transition-transform duration-300">
-
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 animate-fadeInUp">Ghulam Muhammad</h1>
-                <p class="text-xl md:text-2xl font-medium mb-6 text-gray-200 animate-fadeInUp animate-delay-100">Elite Google Ads & Shopify Strategist</p>
-                <p class="max-w-3xl mx-auto text-base md:text-lg mb-8 text-gray-300 animate-fadeInUp animate-delay-200">
-                    Driving exponential growth for e-commerce businesses through precision-targeted Google Ads campaigns and conversion-focused Shopify optimization. Let's elevate your brand.
+    <section id="about" class="fade-in-section py-16 bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+            <div class="text-center md:text-left">
+                <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-6">About Me</h2>
+                <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">
+                    I am a seasoned Google Ads and Shopify strategist with a proven track record of helping businesses achieve significant growth and maximize their return on investment (ROI). My expertise lies in crafting data-driven paid advertising campaigns and optimizing Shopify stores for conversions.
                 </p>
-                <div class="flex flex-wrap justify-center items-center gap-4 md:gap-6 text-sm md:text-base mb-10 animate-fadeInUp animate-delay-300">
-                    <span class="bg-white/25 backdrop-blur-sm px-4 py-2 rounded-full shadow"><i class="fas fa-hand-holding-dollar mr-2 text-accent"></i> €70k+ Ad Spend Managed</span>
-                    <span class="bg-white/25 backdrop-blur-sm px-4 py-2 rounded-full shadow"><i class="fas fa-award mr-2 text-accent"></i> Google Certified Professional</span>
-                    <span class="bg-white/25 backdrop-blur-sm px-4 py-2 rounded-full shadow"><i class="fas fa-calendar-alt mr-2 text-accent"></i> 3+ Years Proven Experience</span>
-                    </div>
+                <p class="text-lg text-gray-700 dark:text-gray-300">
+                   I work closely with clients to understand their unique goals and challenges, developing tailored strategies that deliver tangible results. Whether you're looking to increase sales, improve brand visibility, or streamline your online store, I have the skills and experience to make it happen.
+                </p>
+            </div>
+             <div class="flex justify-center">
+                <img src="images/about-ghulam.jpg" class="w-full max-w-sm rounded-lg shadow-xl" alt="About Ghulam Muhammad">
+             </div>
+        </div>
+    </section>
 
-                <a href="#contact" class="inline-block bg-accent text-accent-dark hover:bg-accent-dark font-bold py-3 px-10 rounded-lg shadow-lg transition duration-300 text-lg transform hover:scale-105 animate-fadeInUp animate-delay-300">
-                    <i class="fas fa-rocket mr-2"></i> Propel Your Growth - Free Call
+     <section id="services" class="fade-in-section py-16 bg-gray-100 dark:bg-gray-900">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-10">My Expertise</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card">
+                    <i class="fas fa-bullhorn text-secondary text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">Google Ads Strategy & Management</h3>
+                    <p class="text-gray-700 dark:text-gray-300">Creating and managing high-performance Google Ads campaigns across Search, Display, Shopping, and YouTube to drive targeted traffic and conversions.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-shopping-cart text-secondary text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">Shopify Store Optimization</h3>
+                    <p class="text-gray-700 dark:text-gray-300">Optimizing Shopify stores for speed, user experience, and conversion rate, ensuring a seamless customer journey from ad click to purchase.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-chart-pie text-secondary text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">Conversion Rate Optimization (CRO)</h3>
+                    <p class="text-gray-700 dark:text-gray-300">Analyzing user behavior and implementing strategies to improve the percentage of website visitors who complete a desired action.</p>
+                </div>
+                 <div class="service-card">
+                    <i class="fas fa-search text-secondary text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">Google Analytics 4 (GA4) Setup & Analysis</h3>
+                    <p class="text-gray-700 dark:text-gray-300">Implementing and analyzing GA4 to gain deep insights into user behavior and campaign performance.</p>
+                </div>
+                 <div class="service-card">
+                    <i class="fas fa-tags text-secondary text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">Google Tag Manager (GTM) Implementation</h3>
+                    <p class="text-gray-700 dark:text-gray-300">Setting up and managing GTM for accurate tracking and marketing tag deployment.</p>
+                </div>
+                 <div class="service-card">
+                    <i class="fas fa-boxes text-secondary text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">Google Merchant Center Management</h3>
+                    <p class="text-gray-700 dark:text-gray-300">Managing product feeds and ensuring compliance for successful Google Shopping campaigns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="results" class="fade-in-section py-16 bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-10">My Results</h2>
+            <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">
+                I am committed to delivering measurable results for my clients. Below are some examples of the impact I've made.
+            </p>
+            <div class="grid md:grid-cols-2 gap-8 text-left">
+                <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-3">Case Study 1: E-commerce Sales Growth</h3>
+                    <p class="text-gray-700 dark:text-gray-300">Achieved a <strong>250% increase in online sales</strong> within 6 months for a client through targeted Google Shopping campaigns and landing page optimization.</p>
+                </div>
+                 <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-3">Case Study 2: Improved ROI</h3>
+                    <p class="text-gray-700 dark:text-gray-300">Reduced Cost Per Acquisition (CPA) by <strong>40%</strong> while increasing conversion volume through granular keyword targeting and ad copy optimization.</p>
+                </div>
+            </div>
+             <p class="text-center text-gray-600 dark:text-gray-400 mt-8">
+                (More detailed case studies available upon request)
+            </p>
+        </div>
+    </section>
+
+    <section id="testimonials" class="fade-in-section bg-gray-50 dark:bg-gray-900 py-16">
+        <div class="container mx-auto px-4 text-center">
+             <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-10">What Clients Say</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="testimonial-card text-left">
+                    <i class="fas fa-quote-left text-accent text-xl mb-4"></i>
+                    <blockquote class="mb-4 text-lg italic text-gray-800 dark:text-gray-200">
+                        “GM's expertise in Google Ads has greatly benefited our educational website. Their tailored campaigns helped us reach the right audience, significantly increasing traffic and enrollments.”
+                    </blockquote>
+                    <footer class="text-sm font-semibold text-gray-600 dark:text-gray-400">— Educational Website</footer>
+                </div>
+                <div class="testimonial-card text-left">
+                     <i class="fas fa-quote-left text-accent text-xl mb-4"></i>
+                    <blockquote class="mb-4 text-lg italic text-gray-800 dark:text-gray-200">
+                        “Thanks to GM's strategic approach, our cosmetics website has seen a sharp rise in visibility and sales. Highly recommend their services!”
+                    </blockquote>
+                    <footer class="text-sm font-semibold text-gray-600 dark:text-gray-400">— Cosmetics Website</footer>
+                </div>
+                <div class="testimonial-card text-left">
+                     <i class="fas fa-quote-left text-accent text-xl mb-4"></i>
+                    <blockquote class="mb-4 text-lg italic text-gray-800 dark:text-gray-200">
+                        “GM's Google Ads management has been a game-changer for our garments website. We’ve seen remarkable growth and higher ROI.”
+                    </blockquote>
+                    <footer class="text-sm font-semibold text-gray-600 dark:text-gray-400">— Garments Website</footer>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tools" class="fade-in-section bg-white dark:bg-gray-800 py-16">
+        <div class="container mx-auto px-4 text-center">
+             <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-10">Tools I Master</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8 items-center justify-items-center">
+                <img src="images/tools/logo-google-ads.png" alt="Google Ads Logo" class="h-12 opacity-80 hover:opacity-100 transition">
+                <img src="images/tools/logo-ga4.png" alt="GA4 Logo" class="h-12 opacity-80 hover:opacity-100 transition">
+                <img src="images/tools/logo-gtm.png" alt="GTM Logo" class="h-12 opacity-80 hover:opacity-100 transition">
+                <img src="images/tools/logo-gmc.png" alt="Merchant Center Logo" class="h-12 opacity-80 hover:opacity-100 transition">
+                <img src="images/tools/logo-shopify.png" alt="Shopify Logo" class="h-12 opacity-80 hover:opacity-100 transition">
+                <img src="images/tools/logo-gmb.png" alt="Google Business Profile Logo" class="h-12 opacity-80 hover:opacity-100 transition">
+                <img src="images/tools/logo-semrush.png" alt="SEMrush Logo" class="h-12 opacity-80 hover:opacity-100 transition">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="fade-in-section bg-primary-dark text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Grow Your Business?</h2>
+             <p class="text-lg text-gray-300 mb-8">Let's discuss how expert Google Ads and Shopify strategies can drive your online success.</p>
+            <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+                <a href="https://wa.me/923029001226" target="_blank" class="bg-white text-primary-dark font-bold py-3 px-8 rounded-full shadow-lg hover:bg-accent hover:text-white transition duration-300 text-lg">
+                    <i class="fab fa-whatsapp mr-2"></i> Message on WhatsApp
+                </a>
+                <a href="mailto:personal.gm@gmail.com" class="bg-white text-primary-dark font-bold py-3 px-8 rounded-full shadow-lg hover:bg-accent hover:text-white transition duration-300 text-lg">
+                    <i class="fas fa-envelope mr-2"></i> Send Email
                 </a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="about" class="bg-white">
-            <div class="container mx-auto max-w-6xl animate-fadeInUp">
-                <div class="grid grid-cols-1 md:grid-cols-5 gap-12 items-center">
-                    <div class="md:col-span-2">
-                         <img src="https://placehold.co/500x500/e0e0e0/333333?text=About+GM+v5" alt="Ghulam Muhammad - Strategy Session" class="w-full rounded-lg shadow-xl object-cover aspect-square transform transition-transform duration-500 hover:scale-105">
-                    </div>
-                    <div class="md:col-span-3">
-                        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6"><i class="fas fa-user-tie mr-3 text-secondary"></i> Meet Your Growth Partner</h2>
-                        <div class="text-lg text-gray-700 space-y-5 leading-relaxed">
-                            <p>
-                                I'm Ghulam Muhammad, a dedicated digital strategist specializing in Google Ads and Shopify. My core mission is simple: to deliver tangible, significant growth for ambitious e-commerce businesses like yours.
-                            </p>
-                            <p>
-                                With a foundation built on <strong class="text-secondary">data-driven insights, continuous learning, and transparent communication</strong>, I craft bespoke strategies that align perfectly with your unique business objectives. I don't just manage campaigns; I build pathways to sustainable success.
-                            </p>
-                            <p>
-                                Based in Sargodha, Pakistan, I partner with clients globally, bringing a meticulous approach to optimizing every facet of your online presence – from ad click to final conversion. Let's collaborate to unlock your brand's full potential.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="services" class="bg-gray-50">
-            <div class="container mx-auto max-w-7xl animate-fadeInUp">
-                <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-14"><i class="fas fa-concierge-bell mr-3 text-secondary"></i> Core Service Offerings</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-secondary transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-                        <div class="flex items-center mb-4">
-                            <i class="fas fa-bullhorn text-4xl text-secondary mr-4"></i>
-                            <h3 class="text-2xl font-semibold text-primary">Google Ads Mastery</h3>
-                        </div>
-                        <p class="text-gray-600 leading-relaxed">Expert management of Search, Shopping, PMax, Display & Video campaigns, focused on maximizing ROAS and acquiring high-value customers.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-secondary transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-                         <div class="flex items-center mb-4">
-                            <i class="fas fa-store-alt text-4xl text-secondary mr-4"></i>
-                            <h3 class="text-2xl font-semibold text-primary">Shopify Optimization</h3>
-                        </div>
-                        <p class="text-gray-600 leading-relaxed">Full-stack Shopify services: Setup, theme customization (Liquid), CRO, app integration, speed optimization for seamless user experiences.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-secondary transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-                         <div class="flex items-center mb-4">
-                            <i class="fas fa-magnifying-glass-chart text-4xl text-secondary mr-4"></i>
-                            <h3 class="text-2xl font-semibold text-primary">Advanced Analytics & Tracking</h3>
-                        </div>
-                        <p class="text-gray-600 leading-relaxed">Precision setup of GA4 & GTM for robust conversion tracking, insightful reporting, and data-backed decision-making.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-secondary transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-                         <div class="flex items-center mb-4">
-                            <i class="fas fa-database text-4xl text-secondary mr-4"></i>
-                            <h3 class="text-2xl font-semibold text-primary">Merchant Center Management</h3>
-                        </div>
-                        <p class="text-gray-600 leading-relaxed">Optimizing product feeds, resolving issues, and ensuring maximum visibility for your products on Google Shopping.</p>
-                    </div>
-                     <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-secondary transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-                         <div class="flex items-center mb-4">
-                            <i class="fas fa-map-location-dot text-4xl text-secondary mr-4"></i>
-                            <h3 class="text-2xl font-semibold text-primary">Local SEO & GMB</h3>
-                        </div>
-                        <p class="text-gray-600 leading-relaxed">Enhancing your Google Business Profile and local search presence to attract nearby customers and drive foot traffic.</p>
-                    </div>
-                     <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-secondary transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-                         <div class="flex items-center mb-4">
-                            <i class="fas fa-file-signature text-4xl text-secondary mr-4"></i>
-                            <h3 class="text-2xl font-semibold text-primary">Strategic Consultation</h3>
-                        </div>
-                        <p class="text-gray-600 leading-relaxed">Providing expert audits, strategic planning, and actionable recommendations to elevate your overall digital marketing efforts.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="results" class="bg-white">
-            <div class="container mx-auto max-w-6xl animate-fadeInUp">
-                <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-14"><i class="fas fa-chart-pie mr-3 text-secondary"></i> Proven Results & Impact</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <div class="bg-gray-50 p-6 rounded-lg shadow-xl border border-gray-200 flex flex-col md:flex-row items-center gap-6">
-                        <img src="https://placehold.co/250x150/005eb8/ffffff?text=ROAS+1985%25" alt="Google Ads ROAS Result 1985%" class="w-full md:w-1/3 rounded-md shadow-md object-cover">
-                        <div class="flex-1">
-                            <h3 class="text-xl font-semibold text-secondary mb-2">1985% ROAS Achieved</h3>
-                            <p class="text-gray-700 mb-1"><strong class="text-primary">Client:</strong> Fashion E-commerce</p>
-                            <p class="text-gray-600 text-sm">Revitalized underperforming campaigns through strategic Shopping & PMax optimization, leading to exponential profit growth.</p>
-                        </div>
-                    </div>
-                    <div class="bg-gray-50 p-6 rounded-lg shadow-xl border border-gray-200 flex flex-col md:flex-row items-center gap-6">
-                         <img src="https://placehold.co/250x150/003366/ffffff?text=ROAS+1473%25" alt="Google Ads ROAS Result 1473%" class="w-full md:w-1/3 rounded-md shadow-md object-cover">
-                        <div class="flex-1">
-                            <h3 class="text-xl font-semibold text-secondary mb-2">1473% ROAS at Scale</h3>
-                            <p class="text-gray-700 mb-1"><strong class="text-primary">Client:</strong> Home Goods Retailer</p>
-                            <p class="text-gray-600 text-sm">Implemented advanced tracking and value-based bidding to scale ad spend effectively while maintaining exceptional returns.</p>
-                        </div>
-                    </div>
-                    </div>
-            </div>
-        </section>
-
-        <section id="testimonials" class="bg-gradient-to-br from-primary to-secondary text-white">
-            <div class="container mx-auto max-w-4xl text-center animate-fadeInUp">
-                <h2 class="text-3xl md:text-4xl font-bold mb-10"><i class="fas fa-comments mr-3 text-accent"></i> Client Success Stories</h2>
-                <div id="testimonialContainer" class="relative min-h-[150px]">
-                    <div class="testimonial active">
-                        <blockquote class="text-xl md:text-2xl italic mb-4 leading-relaxed">
-                            "Ghulam's expertise in Google Ads is unmatched. He transformed our campaigns, significantly boosted our ROAS, and was incredibly professional throughout. Highly recommended!"
-                        </blockquote>
-                        <cite class="block not-italic font-medium text-accent">- Client A, CEO of Fashion Brand</cite>
-                    </div>
-                    <div class="testimonial">
-                        <blockquote class="text-xl md:text-2xl italic mb-4 leading-relaxed">
-                            "The improvements Ghulam made to our Shopify store and ad strategy resulted in a noticeable increase in sales and conversions. His data-driven approach really works."
-                        </blockquote>
-                        <cite class="block not-italic font-medium text-accent">- Client B, Owner of Home Goods Store</cite>
-                    </div>
-                    <div class="testimonial">
-                         <blockquote class="text-xl md:text-2xl italic mb-4 leading-relaxed">
-                            "Working with Ghulam felt like having an in-house expert. He's responsive, insightful, and genuinely cares about achieving the best results for his clients."
-                        </blockquote>
-                        <cite class="block not-italic font-medium text-accent">- Client C, Marketing Manager</cite>
-                    </div>
-                </div>
-                <div class="mt-8">
-                    <button onclick="prevTestimonial()" class="bg-white/20 hover:bg-white/40 text-white py-2 px-4 rounded-l-lg transition duration-300"><i class="fas fa-chevron-left"></i></button>
-                    <button onclick="nextTestimonial()" class="bg-white/20 hover:bg-white/40 text-white py-2 px-4 rounded-r-lg transition duration-300"><i class="fas fa-chevron-right"></i></button>
-                </div>
-            </div>
-        </section>
-
-
-        <section id="tools" class="bg-white">
-            <div class="container mx-auto max-w-5xl text-center animate-fadeInUp">
-                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-10"><i class="fas fa-tools mr-3 text-secondary"></i> My Digital Toolkit</h2>
-                <p class="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
-                    Leveraging the industry's best tools and platforms for analysis, execution, and reporting to ensure peak performance.
-                </p>
-                <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-6 md:gap-x-12 md:gap-y-8">
-                    <div class="text-center group">
-                        <img src="https://placehold.co/100x50/ffffff/cccccc?text=G+Ads" alt="Google Ads Logo" class="h-10 md:h-12 mx-auto mb-1 transition-transform duration-300 group-hover:scale-110">
-                        <span class="text-sm text-gray-600">Google Ads</span>
-                    </div>
-                     <div class="text-center group">
-                        <img src="https://placehold.co/100x50/ffffff/cccccc?text=GA4" alt="Google Analytics 4 Logo" class="h-10 md:h-12 mx-auto mb-1 transition-transform duration-300 group-hover:scale-110">
-                         <span class="text-sm text-gray-600">Google Analytics 4</span>
-                    </div>
-                    <div class="text-center group">
-                        <img src="https://placehold.co/100x50/ffffff/cccccc?text=GTM" alt="Google Tag Manager Logo" class="h-10 md:h-12 mx-auto mb-1 transition-transform duration-300 group-hover:scale-110">
-                         <span class="text-sm text-gray-600">Google Tag Manager</span>
-                    </div>
-                     <div class="text-center group">
-                        <img src="https://placehold.co/100x50/ffffff/cccccc?text=GMC" alt="Google Merchant Center Logo" class="h-10 md:h-12 mx-auto mb-1 transition-transform duration-300 group-hover:scale-110">
-                         <span class="text-sm text-gray-600">Merchant Center</span>
-                    </div>
-                     <div class="text-center group">
-                        <img src="https://placehold.co/100x50/ffffff/cccccc?text=Shopify" alt="Shopify Logo" class="h-10 md:h-12 mx-auto mb-1 transition-transform duration-300 group-hover:scale-110">
-                         <span class="text-sm text-gray-600">Shopify</span>
-                    </div>
-                     <div class="text-center group">
-                        <img src="https://placehold.co/100x50/ffffff/cccccc?text=GMB" alt="Google Business Profile Logo" class="h-10 md:h-12 mx-auto mb-1 transition-transform duration-300 group-hover:scale-110">
-                         <span class="text-sm text-gray-600">Google Business Profile</span>
-                    </div>
-                     <div class="text-center group">
-                        <img src="https://placehold.co/100x50/ffffff/cccccc?text=SEMrush" alt="SEMrush Logo" class="h-10 md:h-12 mx-auto mb-1 transition-transform duration-300 group-hover:scale-110">
-                         <span class="text-sm text-gray-600">SEMrush</span>
-                    </div>
-                    <div class="text-center group">
-                        <img src="https://placehold.co/100x50/ffffff/cccccc?text=Looker" alt="Looker Studio Logo" class="h-10 md:h-12 mx-auto mb-1 transition-transform duration-300 group-hover:scale-110">
-                         <span class="text-sm text-gray-600">Looker Studio</span>
-                    </div>
-                    </div>
-                 <div class="text-center mt-12">
-                     <p class="text-lg text-gray-700 font-medium">Certified Google Ads Professional (Search, Shopping, Display, Measurement)</p>
-                     </div>
-            </div>
-        </section>
-
-        <section id="contact" class="bg-primary-dark text-white">
-            <div class="container mx-auto max-w-4xl text-center animate-fadeInUp">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6"><i class="fas fa-envelope-open-text mr-3 text-accent"></i> Let's Build Your Success Story</h2>
-                <p class="text-lg md:text-xl mb-10 text-gray-300">
-                    Ready to take your e-commerce business to the next level? Reach out for a free, no-obligation discovery call to discuss your goals.
-                </p>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-10">
-                    <div class="bg-white/10 backdrop-blur-sm p-8 rounded-lg shadow-lg text-left">
-                         <h3 class="text-2xl font-semibold mb-5 text-accent border-b border-accent/50 pb-2">Direct Contact</h3>
-                         <p class="mb-4 text-lg">
-                            <i class="fab fa-whatsapp mr-3 text-green-400 fa-fw"></i><strong class="mr-2">WhatsApp:</strong>
-                            <a href="https://wa.me/923029001226?text=Hi%20Ghulam,%20I'm%20interested%20in%20your%20services." target="_blank" class="hover:text-accent transition duration-300 break-all">+92 302 9001226</a>
-                         </p>
-                         <p class="text-lg">
-                            <i class="fas fa-at mr-3 text-red-400 fa-fw"></i><strong class="mr-2">Email:</strong>
-                            <a href="mailto:personal.gm@gmail.com" class="hover:text-accent transition duration-300 break-all">personal.gm@gmail.com</a>
-                         </p>
-                    </div>
-                    <div class="text-center md:text-left">
-                        <p class="text-lg mb-4 text-gray-300">Schedule a convenient time for your free consultation:</p>
-                        <a href="#contact" class="inline-block bg-accent text-accent-dark hover:bg-accent-dark font-bold py-4 px-10 rounded-lg shadow-lg transition duration-300 text-lg transform hover:scale-105">
-                            <i class="fas fa-calendar-check mr-2"></i> Book Free Discovery Call
-                        </a>
-                         </div>
-                </div>
-                 <p class="text-sm text-gray-400"><i class="fas fa-map-marker-alt mr-1"></i> Based in Sargodha, Punjab, Pakistan - Serving Clients Globally</p>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="bg-primary-dark text-gray-400 py-6 px-4 text-center text-sm">
-        <div class="container mx-auto">
-            <p>&copy; <span id="currentYear">2025</span> Ghulam Muhammad | Elite Digital Strategist. All Rights Reserved.</p>
+    <footer class="bg-gray-800 dark:bg-gray-900 text-gray-400 py-8 text-center text-sm">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2024 Ghulam Muhammad. All rights reserved.</p>
+             <p class="mt-2">Designed with <i class="fas fa-heart text-red-500 mx-1"></i> and Tailwind CSS</p>
         </div>
     </footer>
 
-    <button id="backToTopBtn" onclick="scrollToTop()" title="Go to top" class="bg-secondary hover:bg-primary text-white font-bold py-3 px-4 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-110">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
     <script>
-        // Set current year in footer
-        // document.getElementById('currentYear').textContent = new Date().getFullYear(); // Use 2025 as requested
+        const sections = document.querySelectorAll('.fade-in-section');
 
-        // --- Back to Top Button Logic ---
-        const backToTopBtn = document.getElementById('backToTopBtn');
-        window.onscroll = function() { scrollVisibilityFunction(); };
+        const observerOptions = {
+            threshold: 0.1 // Trigger when 10% of the section is visible
+        };
 
-        function scrollVisibilityFunction() {
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                backToTopBtn.style.display = "block";
-                 // Optional: Add fade-in effect
-                 // backToTopBtn.style.opacity = "1";
-                 // backToTopBtn.style.visibility = "visible";
-            } else {
-                backToTopBtn.style.display = "none";
-                 // Optional: Add fade-out effect
-                 // backToTopBtn.style.opacity = "0";
-                 // backToTopBtn.style.visibility = "hidden";
-            }
-        }
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Optional: Stop observing once it's visible
+                    // observer.unobserve(entry.target);
+                } else {
+                     // Optional: Remove 'visible' class when out of view
+                    // entry.target.classList.remove('visible');
+                }
+            });
+        }, observerOptions);
 
-        // --- Active Navigation Link Highlighting ---
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('#mainNav a.nav-link');
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Script for active navigation link on scroll
+        const navLinks = document.querySelectorAll('nav a');
 
         window.addEventListener('scroll', () => {
             let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                // Adjust offset as needed based on sticky header height
                 const sectionHeight = section.clientHeight;
-                if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                if (pageYOffset >= sectionTop - sectionHeight / 3) { // Adjusted offset
                     current = section.getAttribute('id');
                 }
             });
 
             navLinks.forEach(link => {
                 link.classList.remove('active');
-                if (link.getAttribute('href').includes(current)) {
+                if (link.href.includes(`#${current}`)) {
                     link.classList.add('active');
                 }
             });
-            // Special case for top of page
-             if (pageYOffset < 200) { // Adjust threshold as needed
-                 navLinks.forEach(link => link.classList.remove('active'));
-                 const homeLink = document.querySelector('#mainNav a.nav-link[href="#hero"]');
-                 if(homeLink) homeLink.classList.add('active');
-             }
         });
 
-        // --- Simple Testimonial Slider ---
-        const testimonials = document.querySelectorAll('.testimonial');
-        let currentTestimonialIndex = 0;
-
-        function showTestimonial(index) {
-            testimonials.forEach((testimonial, i) => {
-                testimonial.classList.remove('active');
-                if (i === index) {
-                    testimonial.classList.add('active');
+         // Script to set initial active nav link on page load
+         document.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash;
+            if (hash) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.href.includes(hash)) {
+                        link.classList.add('active');
+                    }
+                });
+            } else {
+                 // Set 'Home' as active if no hash
+                const homeLink = document.querySelector('nav a[href="#hero"]');
+                if(homeLink) {
+                    homeLink.classList.add('active');
                 }
-            });
-        }
-
-        function nextTestimonial() {
-            currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
-            showTestimonial(currentTestimonialIndex);
-        }
-
-        function prevTestimonial() {
-            currentTestimonialIndex = (currentTestimonialIndex - 1 + testimonials.length) % testimonials.length;
-            showTestimonial(currentTestimonialIndex);
-        }
-
-        // Initialize first testimonial
-        showTestimonial(currentTestimonialIndex);
-
-         // Optional: Auto-rotate testimonials
-         // setInterval(nextTestimonial, 7000); // Change testimonial every 7 seconds
-
-
-        // --- Intersection Observer for Animations ---
-        const observerOptions = {
-            root: null, // relative to document viewport
-            rootMargin: '0px',
-            threshold: 0.1 // 10% visible
-        };
-
-        const observerCallback = (entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Find elements within the section that need animation
-                    entry.target.querySelectorAll('.animate-fadeInUp, .animate-fadeIn').forEach(el => {
-                         // Check if animation hasn't already been applied (optional, prevents re-animation on scroll)
-                         // if (el.style.opacity !== '1') {
-                            el.style.opacity = '1'; // Make visible before animation starts
-                            el.classList.add(el.classList.contains('animate-fadeInUp') ? 'animate-fadeInUp' : 'animate-fadeIn');
-                         // }
-                    });
-                    // Optional: Stop observing the section after it has animated once
-                    // observer.unobserve(entry.target);
-                }
-            });
-        };
-
-        const animationObserver = new IntersectionObserver(observerCallback, observerOptions);
-
-        // Observe all main sections or containers that hold animatable elements
-        document.querySelectorAll('section > div.container').forEach(container => {
-            // Initially hide elements meant to animate
-             container.querySelectorAll('.animate-fadeInUp, .animate-fadeIn').forEach(el => {
-                 el.style.opacity = '0';
-             });
-            animationObserver.observe(container);
-        });
-
+            }
+         });
 
     </script>
-
 </body>
-</html> 
+</html>
